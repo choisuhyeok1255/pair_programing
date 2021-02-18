@@ -6,16 +6,6 @@ body {
   background-color: #F1E9E1;
 }
 
-.contents-container {
-  position: relative;
-  width: 820px;
-  height: 400px;
-  background: #FFFFFF;
-  margin: 0 auto;
-  border-radius: 5px;
-  box-shadow: 1px 0px 20px rgba(192, 175, 158, .7), 0px 1px 20px rgba(192, 175, 158, .7), -1px 0px 20px rgba(192, 175, 158, .7), 0px -1px 20px rgba(192, 175, 158, .7);
-}
-
 .contents-category {
   display: flex;
   list-style: none;
@@ -26,17 +16,41 @@ body {
   color: #A7978B;
 }
 
+.contents-container {
+  position: relative;
+  width: 820px;
+  height: 400px;
+  background: #FFFFFF;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 1px 0px 20px rgba(192, 175, 158, .7), 0px 1px 20px rgba(192, 175, 158, .7), -1px 0px 20px rgba(192, 175, 158, .7), 0px -1px 20px rgba(192, 175, 158, .7);
+}
+
+.carousel-view {
+  width: 556px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.carousel-slides {
+  --currentSlide: 0;
+  --duration: 1;
+  left: 0;
+  transition: transform calc(var(--duration) * 500ms) ease-out;
+  transform: translate3d(calc(var(--currentSlide) * -553px), 0, 0);
+}
+
+
 .carousel-list {
   display: flex;
   list-style: none;
   width: 600px;
   padding: 0;
   margin: 0 auto;
-  justify-content: space-around;
 }
 
 .list-item {
-  margin: 0;
+  margin: 0 10px;
 }
 
 .list-item > figure {
